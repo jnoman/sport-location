@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <title>sport location</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!--Header-->
+        <div class="header">
+            <div class="menu1">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Gallerie</a></li>
+                        <li><p onclick="afficher_connextion()">Réservation</p</li>
+                        <li><p onclick="afficher_inscription()">Inscription</p></li>
+                        <li><p onclick="afficher_connextion()">Connection</p></li>
+                    </ul>  
+                </div>
+            </div>
+            <video autoplay muted loop id="myVideo">
+                <source src="../media/rain.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!--Section-->
+        <div class="section_galerie" id="section_galerie">
+            <a class="slid-1" onclick="Slides(-1)">&#10094;</a>
+            <a class="slid_1" onclick="Slides(1)">&#10095;</a>
+        </div>
+        <div class="bg_connexion" id="bg_connexion">
+            <div class="connection_form">
+                <p class="close" onclick="Hidden_connection()">+</p>
+                <h1>Connection</h1>
+                <input type="text" placeholder="Email" class="input_text Email" id="ConnectionEmail" oninput="validation_email(0)"><br>
+                <input type="password" placeholder="Mot de passe" class="input_text password" id="ConnectionMotDePass" oninput="validation_password(0)"><br><br><br><br><br><br>
+                <button class="btn_connection" onclick="f_connection()">Connection</button>
+                <p class="inscription" onclick="connection_to_inscription()">Vous n'avez pas de compte ?</p>
+            </div>
+        </div>
+        <div class="bg_connexion" id="bg_inscription">
+            <div class="connection_form">
+                <p class="close" onclick="Hidden_inscription()">+</p>
+                <h1>Inscription</h1>
+                <input type="text" placeholder="Email" class="input_text Email" id="inscriptionEmail" oninput="validation_email(1)">
+                <input type="text" placeholder="Nom" class="input_text nom" id="inscriptionNom" oninput="validation_nom()">
+                <input type="date" id="date_naissance" class="input_text" onchange="date_naissance()" value="1990-01-01">
+                <input type="password" placeholder="Mot de passe" id="inscriptionMotDePass" class="input_text password" oninput="validation_password(1)">
+                <button class="btn_connection" onclick="f_inscription()">Inscription</button>
+                <p class="inscription" onclick="inscription_to_connection()">Vous avez déjà un compte ?</p>
+            </div>
+        </div>
+        <div class="bg_services">
+            <div class="text_service">
+                <img src="../media/logo.png" class="logo">
+                <p>
+                    Sport Location est site des locations de véhicules sport dans Maroc, 
+                    Sport Location est le plus grand service de réservation de locations 
+                    de voitures dans le monde. En collaboration avec les plus grands fournisseurs, 
+                    nous vous proposons des tarifs avantageux sur tous types de véhicules, 
+                    y compris les véhicules de sport. Avec un centre d'appels multilingue 
+                    ouvert 7 jours sur 7, nous pouvons vous trouver les meilleurs tarifs de 
+                    location quand vous voulez - où vous voulez.
+                </p>
+            </div>
+            <div class="image_services"></div>
+        </div>
+
+        <!--Footer-->
+        <div class="footer">
+            <div class="footer_container">
+                <table class="table_footer">
+                    <tr>
+                        <td><img src="../media/flash.png"></td>
+                        <td>À propos the Sport Location</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/flash.png"></td>
+                        <td>FAQ sur the family travel</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/flash.png"></td>
+                        <td>Conditions d'utilisation</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/flash.png"></td>
+                        <td>Blogger</td>
+                    </tr>
+                </table>
+                <table class="table_footer footer_contact">
+                    <tr>
+                        <td><img src="../media/fb.png"></td>
+                        <td>sur facebook</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/tw.png"></td>
+                        <td>sur twitter</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/yt.png"></td>
+                        <td>sur youtube</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/ins.png"></td>
+                        <td>sur instagram</td>
+                    </tr>
+                </table>
+                <table class="table_footer footer_contact">
+                    <tr>
+                        <td><img src="../media/GPS.png"></td>
+                        <td>80,centre ville Safi - 46010,Maroc</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/AT.png"></td>
+                        <td>location@sport.com</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/TL.png"></td>
+                        <td>0512344321</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../media/TL1.png"></td>
+                        <td>0612344321</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@Copyright 2020. All Right Reserved</p>
+            <p>Privacy Policy</p>
+            <p> Terms & Conditions</p>
+        </div>
+        <script src="../js/jquery-3.4.1.slim.min.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/traitement.js"></script>
+    </body>
+</html>
