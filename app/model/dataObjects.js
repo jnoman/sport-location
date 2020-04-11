@@ -82,12 +82,7 @@ class Reservation {
         this.ID_client = ID_client;
         this.duree = duree;
         this.nbrPersonnes = nbrPersonnes;
-    }
-    // 
-    setDateQuestion(date) {
-        this.dateQuestion = date;
-    }
-    // 
+    } 
     getAll(type = 'object') {
         let returnData = {
             id: this.id,
@@ -98,7 +93,6 @@ class Reservation {
         }
         if (type != 'object')
             returnData = [this.id, this.ID_produit, this.ID_client, this.duree, this.nbrPersonnes];
-        // 
         return returnData;
     }
     getId() {

@@ -100,7 +100,7 @@ function createCard(resrvation,image)
     button_supprimer.addEventListener('click', () => {
         supprimerDuree(resrvation.id);
     });
-    select.value=resrvation.duree;
+    select.value=resrvation.nbrPersonnes;
     cont.appendChild(img);
     cont.appendChild(txt_id);
     cont.appendChild(select);
@@ -113,12 +113,12 @@ function makeEelement(elem, elemClass) {
     item.setAttribute('class', elemClass);
     return item;
 }
-function modifierDuree(id,duree)
+function modifierDuree(id,nomber)
 {
-    $.post('/jsonUpdateDuree', {
+    $.post('/jsonNomberPersonne', {
         data:{
             id:id,
-            duree:duree
+            nomber:nomber
         }
     }, (response) => {
         if(response=="true")

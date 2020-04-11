@@ -179,7 +179,7 @@ async function getImageById(id) {
     );
     return retValue;
 }
-async function updateDuree(data) {
+async function updateNomberPersonne(data) {
     const FILE_PATH = _PATH.join(__dirname, '..', 'data', `Reservation.json`);
     let retValue = true;
     var Reservations = await jsonGetAll("Reservation");
@@ -189,7 +189,7 @@ async function updateDuree(data) {
             dataObject.push(Reservations[i].getAll());
             if (Reservations[i].getId() == data.id)
             {
-                dataObject[i].duree=data.duree;
+                dataObject[i].nbrPersonnes=data.nomber;
             }
         }
         await _FS.writeJSON(FILE_PATH, dataObject);
@@ -224,7 +224,7 @@ module.exports = {
     searchByImage,
     getAllReservationByIdClient,
     getImageById,
-    updateDuree,
+    updateNomberPersonne,
     deleteReservation
 }
 
